@@ -2,6 +2,6 @@
 
 # Your secret key for verifying the integrity of signed cookies.
 # If you change this key, all old signed cookies will become invalid!
-# Make sure the secret is at least 30 characters and all random, 
+# Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-ActionController::Base.cookie_verifier_secret = '9421da4dad427197099fe2ee2efd55d5c4f51e2fa2e6caee0f159a342cf0124f5ea9fa7a5ecda95c5858cd9beee522818d812798b2f4fee9ac07c10d43ab8a36';
+Egopad::Application.config.secret_token = '78bb9b9d4eafdcfd47cb35f2491b199162ef7be98a260ae7827a79de9b3050edf76c0840db8b1fd9dc694a8145c0e1a41a7a32c563f5350e5f311ed049a4d9be'
