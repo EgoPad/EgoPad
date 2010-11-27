@@ -1,0 +1,28 @@
+<%= form_for @contact do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :FIO %><br />
+    <%= f.text_field :FIO %>
+  </p>
+  <p>
+    <%= f.label :adress %><br />
+    <%= f.text_field :adress %>
+  </p>
+  <p>
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </p>
+  <p>
+    <%= f.label :e_mail %><br />
+    <%= f.text_field :e_mail %>
+  </p>
+  <p>
+    <%= f.label :web_page %><br />
+    <%= f.text_field :web_page %>
+  </p>
+  <p>
+    <%= f.label :contactscategory_id %><br />
+    <%= f.text_field :contactscategory_id %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

@@ -1,0 +1,13 @@
+one:
+  title: MyString
+  URL: MyString
+  content: MyText
+  sharable: false
+  notescategory_id: 1
+
+two:
+  title: MyString
+  URL: MyString
+  content: MyText
+  sharable: false
+  notescategory_id: 1

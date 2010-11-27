@@ -1,0 +1,25 @@
+<% title "Tasks" %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Time Limit</th>
+    <th>Description</th>
+    <th>Active</th>
+    <th>Taskscategory</th>
+  </tr>
+  <% for task in @tasks %>
+    <tr>
+      <td><%= task.title %></td>
+      <td><%= task.time_limit %></td>
+      <td><%= task.description %></td>
+      <td><%= task.active %></td>
+      <td><%= task.taskscategory_id %></td>
+      <td><%= link_to "Show", task %></td>
+      <td><%= link_to "Edit", edit_task_path(task) %></td>
+      <td><%= link_to "Destroy", task, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Task", new_task_path %></p>

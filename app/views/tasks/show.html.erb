@@ -1,0 +1,28 @@
+<% title "Task" %>
+
+<p>
+  <strong>Title:</strong>
+  <%= @task.title %>
+</p>
+<p>
+  <strong>Time Limit:</strong>
+  <%= @task.time_limit %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @task.description %>
+</p>
+<p>
+  <strong>Active:</strong>
+  <%= @task.active %>
+</p>
+<p>
+  <strong>Taskscategory:</strong>
+  <%= @task.taskscategory_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_task_path(@task) %> |
+  <%= link_to "Destroy", @task, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", tasks_path %>
+</p>

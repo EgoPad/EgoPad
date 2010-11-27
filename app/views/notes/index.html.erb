@@ -1,0 +1,25 @@
+<% title "Notes" %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Url</th>
+    <th>Content</th>
+    <th>Sharable</th>
+    <th>Notescategory</th>
+  </tr>
+  <% for notes in @notes %>
+    <tr>
+      <td><%= notes.title %></td>
+      <td><%= notes.URL %></td>
+      <td><%= notes.content %></td>
+      <td><%= notes.sharable %></td>
+      <td><%= notes.notescategory_id %></td>
+      <td><%= link_to "Show", notes %></td>
+      <td><%= link_to "Edit", edit_notes_path(notes) %></td>
+      <td><%= link_to "Destroy", notes, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Notes", new_notes_path %></p>

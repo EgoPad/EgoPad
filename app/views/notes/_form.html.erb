@@ -1,0 +1,24 @@
+<%= form_for @notes do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :URL %><br />
+    <%= f.text_field :URL %>
+  </p>
+  <p>
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </p>
+  <p>
+    <%= f.label :sharable %><br />
+    <%= f.check_box :sharable %>
+  </p>
+  <p>
+    <%= f.label :notescategory_id %><br />
+    <%= f.text_field :notescategory_id %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

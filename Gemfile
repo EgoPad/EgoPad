@@ -16,6 +16,10 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # To use debugger
 # gem 'ruby-debug'
 
+gem 'nifty-generators'
+
+
+
 # Bundle the extra gems:
 # gem 'bj'
 # gem 'nokogiri'
@@ -28,3 +32,4 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # group :development, :test do
 #   gem 'webrat'
 # end
+gem "mocha", :group => :test

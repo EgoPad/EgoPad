@@ -1,0 +1,12 @@
+<% title "Notes Category" %>
+
+<p>
+  <strong>Title:</strong>
+  <%= @notes_category.title %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_notes_category_path(@notes_category) %> |
+  <%= link_to "Destroy", @notes_category, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", notes_categories_path %>
+</p>

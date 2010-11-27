@@ -1,0 +1,24 @@
+<%= form_for @task do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :time_limit %><br />
+    <%= f.date_select :time_limit %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :active %><br />
+    <%= f.check_box :active %>
+  </p>
+  <p>
+    <%= f.label :taskscategory_id %><br />
+    <%= f.text_field :taskscategory_id %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

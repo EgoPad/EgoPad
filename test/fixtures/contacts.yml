@@ -1,0 +1,15 @@
+one:
+  FIO: MyString
+  adress: MyString
+  phone: MyString
+  e_mail: MyString
+  web_page: MyString
+  contactscategory_id: 1
+
+two:
+  FIO: MyString
+  adress: MyString
+  phone: MyString
+  e_mail: MyString
+  web_page: MyString
+  contactscategory_id: 1
