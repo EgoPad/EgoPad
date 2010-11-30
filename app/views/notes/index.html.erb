@@ -8,18 +8,18 @@
     <th>Sharable</th>
     <th>Notescategory</th>
   </tr>
-  <% for notes in @notes %>
+  <% for note in @notes %>
     <tr>
-      <td><%= notes.title %></td>
-      <td><%= notes.URL %></td>
-      <td><%= notes.content %></td>
-      <td><%= notes.sharable %></td>
-      <td><%= notes.notescategory_id %></td>
-      <td><%= link_to "Show", notes %></td>
-      <td><%= link_to "Edit", edit_notes_path(notes) %></td>
-      <td><%= link_to "Destroy", notes, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= note.title %></td>
+      <td><%= note.url %></td>
+      <td><%= note.content %></td>
+      <td><%= note.sharable %></td>
+      <td><%= note.notescategory_id %></td>
+      <td><%= link_to "Show", note %></td>
+      <td><%= link_to "Edit", edit_note_path(note) %></td>
+      <td><%= link_to "Destroy", note, :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
   <% end %>
 </table>
 
-<p><%= link_to "New Notes", new_notes_path %></p>
+<p><%= link_to "New Note", new_note_path %></p>

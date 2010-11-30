@@ -7,7 +7,7 @@ class NotesControllerTest < ActionController::TestCase
   end
   
   def test_show
-    get :show, :id => Notes.first
+    get :show, :id => Note.first
     assert_template 'show'
   end
   
@@ -17,38 +17,38 @@ class NotesControllerTest < ActionController::TestCase
   end
   
   def test_create_invalid
-    Notes.any_instance.stubs(:valid?).returns(false)
+    Note.any_instance.stubs(:valid?).returns(false)
     post :create
     assert_template 'new'
   end
 
   def test_create_valid
-    Notes.any_instance.stubs(:valid?).returns(true)
+    Note.any_instance.stubs(:valid?).returns(true)
     post :create
-    assert_redirected_to notes_url(assigns(:notes))
+    assert_redirected_to note_url(assigns(:note))
   end
   
   def test_edit
-    get :edit, :id => Notes.first
+    get :edit, :id => Note.first
     assert_template 'edit'
   end
   
   def test_update_invalid
-    Notes.any_instance.stubs(:valid?).returns(false)
-    put :update, :id => Notes.first
+    Note.any_instance.stubs(:valid?).returns(false)
+    put :update, :id => Note.first
     assert_template 'edit'
   end
 
   def test_update_valid
-    Notes.any_instance.stubs(:valid?).returns(true)
-    put :update, :id => Notes.first
-    assert_redirected_to notes_url(assigns(:notes))
+    Note.any_instance.stubs(:valid?).returns(true)
+    put :update, :id => Note.first
+    assert_redirected_to note_url(assigns(:note))
   end
   
   def test_destroy
-    notes = Notes.first
-    delete :destroy, :id => notes
+    note = Note.first
+    delete :destroy, :id => note
     assert_redirected_to notes_url
-    assert !Notes.exists?(notes.id)
+    assert !Note.exists?(note.id)
   end
 end

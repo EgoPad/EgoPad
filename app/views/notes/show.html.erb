@@ -1,28 +1,28 @@
-<% title "Notes" %>
+<% title "Note" %>
 
 <p>
   <strong>Title:</strong>
-  <%= @notes.title %>
+  <%= @note.title %>
 </p>
 <p>
   <strong>Url:</strong>
-  <%= @notes.URL %>
+  <%= @note.url %>
 </p>
 <p>
   <strong>Content:</strong>
-  <%= @notes.content %>
+  <%= @note.content %>
 </p>
 <p>
   <strong>Sharable:</strong>
-  <%= @notes.sharable %>
+  <%= @note.sharable %>
 </p>
 <p>
   <strong>Notescategory:</strong>
-  <%= @notes.notescategory_id %>
+  <%= @note.notescategory_id %>
 </p>
 
 <p>
-  <%= link_to "Edit", edit_notes_path(@notes) %> |
-  <%= link_to "Destroy", @notes, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "Edit", edit_note_path(@note) %> |
+  <%= link_to "Destroy", @note, :confirm => 'Are you sure?', :method => :delete %> |
   <%= link_to "View All", notes_path %>
 </p>

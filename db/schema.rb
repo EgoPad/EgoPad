@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101127192607) do
+ActiveRecord::Schema.define(:version => 20101130183259) do
 
   create_table "contacts", :force => true do |t|
     t.string   "FIO"
@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(:version => 20101127192607) do
 
   create_table "notes", :force => true do |t|
     t.string   "title"
-    t.string   "URL"
+    t.string   "url"
     t.text     "content"
     t.boolean  "sharable"
     t.integer  "notescategory_id"

@@ -1,44 +1,44 @@
 class NotesController < ApplicationController
   def index
-    @notes = Notes.all
+    @notes = Note.all
   end
   
   def show
-    @notes = Notes.find(params[:id])
+    @note = Note.find(params[:id])
   end
   
   def new
-    @notes = Notes.new
+    @note = Note.new
   end
   
   def create
-    @notes = Notes.new(params[:notes])
-    if @notes.save
-      flash[:notice] = "Successfully created notes."
-      redirect_to @notes
+    @note = Note.new(params[:note])
+    if @note.save
+      flash[:notice] = "Successfully created note."
+      redirect_to @note
     else
       render :action => 'new'
     end
   end
   
   def edit
-    @notes = Notes.find(params[:id])
+    @note = Note.find(params[:id])
   end
   
   def update
-    @notes = Notes.find(params[:id])
-    if @notes.update_attributes(params[:notes])
-      flash[:notice] = "Successfully updated notes."
-      redirect_to @notes
+    @note = Note.find(params[:id])
+    if @note.update_attributes(params[:note])
+      flash[:notice] = "Successfully updated note."
+      redirect_to @note
     else
       render :action => 'edit'
     end
   end
   
   def destroy
-    @notes = Notes.find(params[:id])
-    @notes.destroy
-    flash[:notice] = "Successfully destroyed notes."
+    @note = Note.find(params[:id])
+    @note.destroy
+    flash[:notice] = "Successfully destroyed note."
     redirect_to notes_url
   end
 end

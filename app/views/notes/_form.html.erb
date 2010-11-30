@@ -1,12 +1,12 @@
-<%= form_for @notes do |f| %>
+<%= form_for @note do |f| %>
   <%= f.error_messages %>
   <p>
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </p>
   <p>
-    <%= f.label :URL %><br />
-    <%= f.text_field :URL %>
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
   </p>
   <p>
     <%= f.label :content %><br />
