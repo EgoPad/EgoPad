@@ -1,0 +1,17 @@
+<% content_for :sidebar do%>
+	
+<ul>
+	<li>
+		<%= link_to 'Все заметки', notes_path %>
+	<% if !Ncategory.all.blank? %>
+	  <% for item in Ncategory.all %>
+	    <li>
+	    	<%= link_to_unless_current item.title, item %>	    	
+    	</li>
+	  <% end %>
+	<% else %>
+	  
+	<% end %>
+</ul>
+
+<% end %>

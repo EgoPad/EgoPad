@@ -19,7 +19,6 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'nifty-generators'
 
 
-
 # Bundle the extra gems:
 # gem 'bj'
 # gem 'nokogiri'

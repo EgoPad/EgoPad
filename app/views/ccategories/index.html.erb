@@ -1,0 +1,17 @@
+<% title "Ccategories" %>
+
+<table>
+  <tr>
+    <th>Title</th>
+  </tr>
+  <% for ccategory in @ccategories %>
+    <tr>
+      <td><%= ccategory.title %></td>
+      <td><%= link_to "Show", ccategory %></td>
+      <td><%= link_to "Edit", edit_ccategory_path(ccategory) %></td>
+      <td><%= link_to "Destroy", ccategory, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Ccategory", new_ccategory_path %></p>

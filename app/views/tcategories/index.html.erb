@@ -1,0 +1,17 @@
+<% title "Tcategories" %>
+
+<table>
+  <tr>
+    <th>Title</th>
+  </tr>
+  <% for tcategory in @tcategories %>
+    <tr>
+      <td><%= tcategory.title %></td>
+      <td><%= link_to "Show", tcategory %></td>
+      <td><%= link_to "Edit", edit_tcategory_path(tcategory) %></td>
+      <td><%= link_to "Destroy", tcategory, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Tcategory", new_tcategory_path %></p>

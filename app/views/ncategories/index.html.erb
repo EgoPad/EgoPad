@@ -1,0 +1,17 @@
+<% title "Ncategories" %>
+
+<table>
+  <tr>
+    <th>Title</th>
+  </tr>
+  <% for ncategory in @ncategories %>
+    <tr>
+      <td><%= ncategory.title %></td>
+      <td><%= link_to "Show", ncategory %></td>
+      <td><%= link_to "Edit", edit_ncategory_path(ncategory) %></td>
+      <td><%= link_to "Destroy", ncategory, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Ncategory", new_ncategory_path %></p>

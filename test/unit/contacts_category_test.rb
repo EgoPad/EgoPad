@@ -1,8 +1,7 @@
 require 'test_helper'
 
 class ContactsCategoryTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
+  def test_should_be_valid
+    assert ContactsCategory.new.valid?
   end
 end

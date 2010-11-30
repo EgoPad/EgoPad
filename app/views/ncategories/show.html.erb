@@ -1,0 +1,17 @@
+<% title "Ncategory" %>
+
+<p>
+  <strong>Title:</strong>
+  <%= @ncategory.title %>
+</p>
+<% if !@ncategory.notes.blank? %>
+  <% for item in @ncategory.notes %>
+    <div>
+    	<h3>
+    		<%= link_to item.title, item %>
+    	</h3>
+    </div>
+  <% end %>
+<% else %>
+  
+<% end %>

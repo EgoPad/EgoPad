@@ -1,4 +1,14 @@
 Egopad::Application.routes.draw do
+  resources :ccategories
+
+  resources :tcategories
+
+  resources :ncategories
+
+  resources :contacts_categories
+
+  resources :tasks_categories
+
   resources :contacts
 
   resources :tasks

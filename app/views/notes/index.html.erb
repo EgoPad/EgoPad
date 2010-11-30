@@ -1,5 +1,6 @@
 <% title "Notes" %>
 
+<% render 'sidebar' %>
 <table>
   <tr>
     <th>Title</th>
@@ -14,7 +15,7 @@
       <td><%= note.url %></td>
       <td><%= note.content %></td>
       <td><%= note.sharable %></td>
-      <td><%= note.notescategory_id %></td>
+      <td><%= note.ncategory_id %></td>
       <td><%= link_to "Show", note %></td>
       <td><%= link_to "Edit", edit_note_path(note) %></td>
       <td><%= link_to "Destroy", note, :confirm => 'Are you sure?', :method => :delete %></td>

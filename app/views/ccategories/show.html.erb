@@ -1,0 +1,12 @@
+<% title "Ccategory" %>
+
+<p>
+  <strong>Title:</strong>
+  <%= @ccategory.title %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_ccategory_path(@ccategory) %> |
+  <%= link_to "Destroy", @ccategory, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", ccategories_path %>
+</p>

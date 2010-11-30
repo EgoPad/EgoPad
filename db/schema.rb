@@ -10,7 +10,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101130183259) do
+ActiveRecord::Schema.define(:version => 20101130200246) do
+
+  create_table "ccategories", :force => true do |t|
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "contacts", :force => true do |t|
     t.string   "FIO"
@@ -21,9 +27,10 @@ ActiveRecord::Schema.define(:version => 20101130183259) do
     t.integer  "contactscategory_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "ccategory_id"
   end
 
-  create_table "contacts_categories", :force => true do |t|
+  create_table "ncategories", :force => true do |t|
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -44,12 +51,7 @@ ActiveRecord::Schema.define(:version => 20101130183259) do
     t.integer  "notescategory_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "notes_categories", :force => true do |t|
-    t.string   "title"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer  "ncategory_id"
   end
 
   create_table "task_contacts", :force => true do |t|
@@ -67,9 +69,10 @@ ActiveRecord::Schema.define(:version => 20101130183259) do
     t.integer  "taskscategory_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "tcategory_id"
   end
 
-  create_table "tasks_categories", :force => true do |t|
+  create_table "tcategories", :force => true do |t|
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"

@@ -1,0 +1,12 @@
+<% title "Tcategory" %>
+
+<p>
+  <strong>Title:</strong>
+  <%= @tcategory.title %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_tcategory_path(@tcategory) %> |
+  <%= link_to "Destroy", @tcategory, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", tcategories_path %>
+</p>
