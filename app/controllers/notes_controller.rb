@@ -1,6 +1,7 @@
 class NotesController < ApplicationController
   def index
     @notes = Note.all
+    @tags = Note.tag_counts
   end
   
   def show

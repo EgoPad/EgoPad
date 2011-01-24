@@ -1,26 +1,42 @@
 <% title "Notes" %>
 
 <% render 'sidebar' %>
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Url</th>
-    <th>Content</th>
-    <th>Sharable</th>
-    <th>Notescategory</th>
-  </tr>
-  <% for note in @notes %>
-    <tr>
-      <td><%= note.title %></td>
-      <td><%= note.url %></td>
-      <td><%= note.content %></td>
-      <td><%= note.sharable %></td>
-      <td><%= note.ncategory_id %></td>
-      <td><%= link_to "Show", note %></td>
-      <td><%= link_to "Edit", edit_note_path(note) %></td>
-      <td><%= link_to "Destroy", note, :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
-  <% end %>
-</table>
 
-<p><%= link_to "New Note", new_note_path %></p>
+<% content_for :searches do %>
+  <div>
+					<%= link_to "Добавить заметку", new_note_path %> |
+					<label> Поиск: <input type="text" placeholder="введите строку поиска" /></label> <input type="button" value="Искать!" /> |
+					<div id="tag_list_container"> <h2>Теги</h2>
+						  <ul>
+                             <% Note.tag_counts.each do |tag| %>
+                                <li><%= link_to tag.name, :controller => "tags", :action => "notes", :name => tag.name %></li>
+                             <% end %>
+						  </ul>
+					</div>
+
+  </div>
+  <% end %>
+
+
+  <% for note in @notes %>
+
+      <div class="note">
+					<h3>
+						<%= link_to note.title, note %> (<%= note.ncategory.title %>) <br />
+                        <small> <i><a href="<%= note.url%>" >note.url</a></i></small>
+					</h3>
+					<p>
+						<%= note.content %>
+					</p>
+					<ul class="tag_list">
+						<% note.tags.each do |f| %>
+                            <li><%= link_to f.name, :controller => "tags", :action => "notes", :name => f.name %></li>
+                          <% end %>
+					</ul>
+						<div class="button_list">
+                            <%= link_to "Просмотреть", note %>
+							<%= link_to "Редактировать", edit_note_path(note) %>
+							<%= link_to "Удалить", note, :confirm => 'Are you sure?', :method => :delete %>
+						</div>
+				</div>
+  <% end %>

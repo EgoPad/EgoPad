@@ -17,7 +17,8 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'ruby-debug'
 
 gem 'nifty-generators'
-
+gem 'formtastic'
+gem 'acts-as-taggable-on'
 
 # Bundle the extra gems:
 # gem 'bj'

@@ -1,4 +1,8 @@
 Egopad::Application.routes.draw do
+  get "tags/notes"
+
+  get "tags/show"
+
   resources :ccategories
 
   resources :tcategories

@@ -1,0 +1,4 @@
+<% title "Заметки с тегом " + @tag %>
+<% @results.each do |f| %>
+    <%= link_to f.title, f %>
+<% end %>

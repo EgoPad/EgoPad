@@ -1,24 +1,11 @@
-<%= form_for @note do |f| %>
-  <%= f.error_messages %>
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :url %><br />
-    <%= f.text_field :url %>
-  </p>
-  <p>
-    <%= f.label :content %><br />
-    <%= f.text_area :content %>
-  </p>
-  <p>
-    <%= f.label :sharable %><br />
-    <%= f.check_box :sharable %>
-  </p>
-  <p>
-    <%= f.label :ncategory_id %><br />
-    <%= f.text_field :ncategory_id %>
-  </p>
-  <p><%= f.submit %></p>
+<%= semantic_form_for @note do |f| %>
+  <%= f.inputs do %>
+        <%= f.input :title, :label => "Название" %>
+        <%= f.input :url, :label => "Ссылка" %>
+        <%= f.input :sharable, :label => "Общий доступ" %>
+        <%= f.input :content, :label => "Содержимое" %>
+        <%= f.input :ncategory, :label => "Категория" %>
+        <%= f.input :tag_list %>
+  <% end %>
+  <%= f.buttons %>
 <% end %>
